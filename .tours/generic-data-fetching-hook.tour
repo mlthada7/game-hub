@@ -1,0 +1,26 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "Generic data fetching hook",
+  "steps": [
+    {
+      "file": "src/hooks/useData.ts",
+      "description": "Karena useGames dan useGenres melakukan fetch data dengan cara yang sama, maka dibuatlah useData agar lebih generic.\r\n```typescript\r\n<T> //Type Parameter, yang akan dikirimkan oleh hook lain yang menggunakan fungsi ini\r\n//exp:\r\nuseData<Game>(\"/games\");\r\n```",
+      "line": 11
+    },
+    {
+      "file": "src/components/GenreList.tsx",
+      "description": "Mendapatkan nilai `data` menggunakan hook useGenres(), tapi dibelakang layar useGenres menggunakan useData()",
+      "line": 4
+    },
+    {
+      "file": "src/hooks/useGames.ts",
+      "description": "Berlaku juga untuk fetching data games",
+      "line": 16
+    },
+    {
+      "file": "src/hooks/useGenres.ts",
+      "description": "Menggunakan useData dengan mengirimkan type parameter `<Genre>` dan endpoint /genres ",
+      "line": 8
+    }
+  ]
+}
