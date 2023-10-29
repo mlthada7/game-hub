@@ -8,11 +8,10 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
-tour
+.tours/*
 dist
 dist-ssr
 .env
-.tour
 *.local
 
 # Editor directories and files
